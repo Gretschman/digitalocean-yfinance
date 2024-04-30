@@ -1,0 +1,5 @@
+packages:
+  - name: yfinance
+    actions:
+      - name: current-rate
+        runtime: "nodejs:default"

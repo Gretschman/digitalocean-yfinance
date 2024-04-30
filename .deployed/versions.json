@@ -1,0 +1,18 @@
+[
+  {
+    "apihost": "https://faas-nyc1-2ef2e6cc.doserverless.co",
+    "namespace": "fn-3461ae32-7b77-486a-8809-526a31ca1be5",
+    "packageVersions": {
+      "yfinance": {
+        "version": "0.0.13",
+        "digest": "03fd712a09242da3b5e6ff4f58c74c17b2abe354b3cf99f718145c3374b11f6d"
+      }
+    },
+    "actionVersions": {
+      "yfinance/current-rate": {
+        "version": "0.0.9",
+        "digest": "4fac170cccff3ce71b072eaf31c24e7bbe5311fe0a7d69a89c227380df6bf83e"
+      }
+    }
+  }
+]
