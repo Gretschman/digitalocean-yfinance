@@ -3,3 +3,7 @@ packages:
     actions:
       - name: current-rate
         runtime: "nodejs:default"
+        environment:
+          RAPID_API_KEY: "${YFINANCE_RAPID_API_KEY}"
+        limits:
+          timeout: 7000

@@ -14,5 +14,21 @@
         "digest": "4fac170cccff3ce71b072eaf31c24e7bbe5311fe0a7d69a89c227380df6bf83e"
       }
     }
+  },
+  {
+    "apihost": "https://faas-nyc1-2ef2e6cc.doserverless.co",
+    "namespace": "fn-42501251-cade-4e44-b011-8a1c95fff603",
+    "packageVersions": {
+      "yfinance": {
+        "version": "0.0.12",
+        "digest": "03fd712a09242da3b5e6ff4f58c74c17b2abe354b3cf99f718145c3374b11f6d"
+      }
+    },
+    "actionVersions": {
+      "yfinance/current-rate": {
+        "version": "0.0.12",
+        "digest": "2fcb9634ca64ffe1501d702ee3cfe4c74ba29120d8c80c7fc7a180e98f03fcf3"
+      }
+    }
   }
 ]

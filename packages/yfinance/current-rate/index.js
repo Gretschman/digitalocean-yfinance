@@ -1,30 +1,24 @@
-const yahooFinance = require("yahoo-finance2").default;
+const axios = require("axios");
 
 async function main(args) {
+  const RAPID_API_KEY = process.env["RAPID_API_KEY"];
+
   try {
-    const path_value = decodeURI(args?.__ow_path);
-
-    if (!path_value) {
-      return {
-        statusCode: 400,
-        body: { error: "Symbol is required", path_value },
-      };
-    }
-
-    const symbol = path_value ? path_value.split("/")[1] : null;
-
-    const results = await yahooFinance.quote(symbol);
-    const regularMarketPrice = results?.regularMarketPrice;
-
-    if (!regularMarketPrice) {
-      throw new Error("Could not get the current rate");
-    }
-
-    console.log("Current rate is: ", regularMarketPrice);
+    const result = await axios.get(
+      encodeURI(
+        `https://yh-finance.p.rapidapi.com/market/v2/get-quotes?symbols=^TNX&region=US`
+      ),
+      {
+        headers: {
+          "x-rapidapi-key": RAPID_API_KEY,
+          "x-rapidapi-host": "yh-finance.p.rapidapi.com",
+        },
+      }
+    );
 
     return {
-      statusCode: 200,
-      body: { symbol, current_rate: regularMarketPrice },
+      statusCode: result.status,
+      body: result.data,
     };
   } catch (err) {
     console.error(err);
